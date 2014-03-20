@@ -1,0 +1,165 @@
+body {
+  background-color: #F1F1F1;
+  font-family: Arial, Verdana, sans serif;
+}
+
+#header .submenu {
+  background-color: #FFF;
+  padding: 15px;
+}
+
+#header #slogan {
+  display: inline-block;
+  white-space:nowrap;
+  padding: 12px 0 12px 60px;
+  background: transparent url(../img/1and1-logo.png) 0 0 no-repeat;
+  font-size: 25px;
+  text-decoration: none;
+  color: #666;
+  font-weight: normal;
+  background-size: 50px 50px;
+}
+#logo-img {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 75px;
+  height: 75px;
+}
+
+#header .logo-chart {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+
+#header ul.menu, .heading {
+  background: #007cc1; /* Old browsers */
+  background: -moz-linear-gradient(top, #007cc1 0%, #0562ad 100%, #7db9e8 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007cc1), color-stop(100%,#0562ad), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #007cc1 0%,#0562ad 100%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+  border-top: 1px #444 solid;
+  border-bottom: 1px #444 solid;
+}
+
+#header ul.menu li {
+  display: inline-block;
+}
+
+#header ul.menu li a, .heading {
+  display: inline-block;
+  padding: 10px 15px;
+  border-right: 1px #2288BF solid;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #000;
+}
+
+#header ul.menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#page {
+  padding: 0;
+}
+
+#container {
+  padding: 15px 15px;
+}
+
+/* CLEARFIX */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* Performance */
+#configPanel, #comparePanel, #content {
+  float: left;
+  margin: 10px;
+}
+
+#configPanel, #comparePanel {
+  width: 300px;
+}
+
+.configContainer {
+  border: 1px solid #444;
+  border-radius: 0px 0px 3px 3px;
+  padding: 5px 10px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.configContainer:last-child {
+  margin-bottom: 0;
+}
+
+.configContainer select {
+  text-transform: capitalize;
+  max-width: 265px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.configRow {
+  display: block;
+}
+
+.heading {
+  display: block;
+  padding: 3px 10px;
+  border: 1px solid #444;
+}
+
+#content {
+  width: 560px;
+}
+
+#content #content-menu {
+  width: 250px;
+  margin-top: 15px;
+}
+
+.small-block {
+  font-size: small;
+  display:block;
+}
+
+#performance {
+  width: 560px;
+}
+
+.loading-img {
+  position: relative;
+  top: 150px;
+  left: -100px;
+}
+
+#config-date thead, #compare-date thead {
+  text-align: center;
+}
+
+#config-date button, #compare-date button {
+  width: 100%;
+}
+
+#config-date-display, #compare-date-display {
+  height: 20px;
+}
+
+.calendar-info {
+  padding: 5px 0;
+  font-size: small;
+  display: inline-block;
+}
+
+.kill-me {
+  cursor: not-allowed;
+}

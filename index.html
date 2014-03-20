@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>1&amp;1 Performancetool</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/chart-small.png">
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <div class="submenu">
+        <a href="http://www.1und1.de" class="logo">
+          <h1 id="slogan">
+            Performancetool
+          </h1>
+        </a>
+      </div>
+      <ul class="menu">
+        <li><a href="./">Home</a></li>
+      </ul>
+    </div>
+
+    <div id="container" class="clearfix">
+      <div id="configPanel">
+        <span class="heading">Config</span>
+        <div class="configContainer">
+          <div class="configRow">
+            Application
+            <select name="app">
+              <option>Please select...</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Page
+            <select name="page">
+              <option>All</option>
+            </select>
+          </div>
+        </div>
+        <span class="heading">Period</span>
+        <div class="configContainer">
+          <div id="config-date">
+
+          </div>
+          <div id="config-date-display"></div>
+        </div>
+        <span class="heading">Filter</span>
+        <div class="configContainer">
+          <div class="configRow">
+            Device
+            <select name="device">
+              <option>All</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Browser
+            <select name="browser">
+              <option>All</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Version
+            <select name="bVersion">
+              <option>All</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Flash
+            <select name="flash">
+              <option>All</option>
+            </select>
+          </div>
+        </div>
+        <span class="heading">Quantile</span>
+        <div class="configContainer">
+          <div class="configRow">
+            Choose Percentile
+            <select name="quantile">
+              <option>Standard</option>
+              <option>P95</option>
+              <option>P90</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="content">
+        <div id="performance">
+
+        </div>
+        <div id="content-menu">
+          <span>Accumulation*</span>
+          <input type="button" id="accumulationView" value="Mode: Off">
+          <span class="small-block">
+            * Sum the separate times,<br>
+            to represent the total time.​​
+          </span>
+        </div>
+      </div>
+
+      <div id="comparePanel">
+        <span class="heading">Compare With</span>
+        <div class="configContainer">
+          <div class="configRow">
+            Application
+            <select name="app">
+              <option>Please select...</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Page
+            <select name="page">
+              <option>All</option>
+            </select>
+          </div>
+        </div>
+        <span class="heading">Period</span>
+        <div class="configContainer">
+          <div id="compare-date">
+
+          </div>
+          <div id="compare-date-display"></div>
+        </div>
+        <span class="heading">Filter</span>
+        <div class="configContainer">
+          <div class="configRow">
+            Device
+            <select name="device">
+              <option>All</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Browser
+            <select name="browser">
+              <option>All</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Version
+            <select name="bVersion">
+              <option>All</option>
+            </select>
+          </div>
+          <div class="configRow">
+            Flash
+            <select name="flash">
+              <option>All</option>
+            </select>
+          </div>
+        </div>
+        <span class="heading">Quantile</span>
+        <div class="configContainer">
+          <div class="configRow">
+            Choose Percentile
+            <select name="quantile">
+              <option>Standard</option>
+              <option>P95</option>
+              <option>P90</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Highcharts -->
+  <script src="js/highcharts/adapters/standalone-framework.src.js"></script>
+  <script src="js/highcharts/highcharts.src.js"></script>
+  <script src="js/highcharts/modules/noDataToDisplay.js"></script>
+  <script src="js/highcharts/modules/exporting.js"></script>
+  <!-- baseLib -->
+  <script src="js/baselib/minimized/base-min.js"></script>
+  <script src="js/baselib/minimized/animation-min.js"></script>
+  <script src="js/baselib/minimized/dataset-min.js"></script>
+  <script src="js/baselib/minimized/log-min.js"></script>
+  <script src="js/baselib/minimized/xhr-min.js"></script>
+  <script src="js/baselib/minimized/fakeserver-min.js"></script>
+  <script src="js/baselib/minimized/rest-min.js"></script>
+  <script src="js/baselib/minimized/widget-min.js"></script>
+  <script src="js/baselib/minimized/calendar-min.js"></script>
+  <!-- FakeServer -->
+  <script src="fakeserver/performanceData.js" type="text/javascript"></script>
+  <script src="fakeserver/configData.js" type="text/javascript"></script>
+  <script src="fakeserver/filterData.js" type="text/javascript"></script>
+  <script src="js/fakeServer.js"></script>
+  <!-- Florence -->
+  <script src="js/florence.chart.js"></script>
+  <script src="js/florence.configPanel.js"></script>
+  <script src="js/florence.js"></script>
+</body>
+</html>
