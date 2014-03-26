@@ -2,6 +2,7 @@ $q.define("RANKING", {
 
   statics : {
 
+    resource: null,
     currentRankingDataSet: null,
 
     init : function () {
@@ -25,7 +26,7 @@ $q.define("RANKING", {
       // Configure REST resources
       description = {
 
-        "getRankingData" : { method: "GET", url: getRankingDataRESTRessource },
+        "getRankingData" : { method: "GET", url: getRankingDataRESTRessource }
 
       };
 
@@ -64,20 +65,30 @@ $q.define("RANKING", {
 
     fillDataInTable : function () {
 
-      for(rank in this.currentRankingDataSet) {
+      var rankingContainer, rank;
 
-        if(this.currentRankingDataSet.hasOwnProperty(rank)) {
+      rankingContainer = $q("#insertRankingDataHere");
 
-          $q("#insertRankingDataHere").append("<tr>"
-                                                + "<td>" + rank + "</td>"
-                                                + "<td>" + this.currentRankingDataSet[rank].app + "</td>"
-                                                + "<td>" + this.currentRankingDataSet[rank].page + "</td>"
-                                                + "<td>" + this.currentRankingDataSet[rank].time + "</td>"
-                                              +"</tr>");
+      if(rankingContainer) {
 
-        }
+        rankingContainer.empty();
 
-      };
+        for(var rank in this.currentRankingDataSet) {
+
+          if(this.currentRankingDataSet.hasOwnProperty(rank)) {
+
+            rankingContainer.append("<tr>"
+                                      + "<td>" + rank + "</td>"
+                                      + "<td>" + this.currentRankingDataSet[rank].app + "</td>"
+                                      + "<td>" + this.currentRankingDataSet[rank].page + "</td>"
+                                      + "<td>" + this.currentRankingDataSet[rank].time + "</td>"
+                                    +"</tr>");
+
+          }
+
+        };
+
+      }
 
     }
 
