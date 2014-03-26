@@ -19,14 +19,9 @@ $q.define("RANKING", {
 
       "use strict";
 
-      var getRankingDataRESTRessource, description;
+      var description = {
 
-      getRankingDataRESTRessource = "/performance/ranking";
-
-      // Configure REST resources
-      description = {
-
-        "getRankingData" : { method: "GET", url: getRankingDataRESTRessource }
+        "getRankingData" : { method: "GET", url: "/performance/ranking" }
 
       };
 
@@ -37,6 +32,7 @@ $q.define("RANKING", {
         this.resource.on("getRankingDataSuccess", function (e) {
           // The response of a successful GET request
           this.currentRankingDataSet = e.response[0];
+          $q.log.info(this, "Got new ranking data.");
           this.fillDataInTable();
 
         }, this);
@@ -73,7 +69,7 @@ $q.define("RANKING", {
 
         rankingContainer.empty();
 
-        for(var rank in this.currentRankingDataSet) {
+        for(rank in this.currentRankingDataSet) {
 
           if(this.currentRankingDataSet.hasOwnProperty(rank)) {
 

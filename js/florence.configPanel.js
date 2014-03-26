@@ -162,7 +162,8 @@ $q.define("CONFIGPANEL", {
 
       var devices = [],
           flash = [],
-          browsers = this.browsers;
+          browsers = this.browsers,
+          browser;
 
       // Devices
       filterWrapper.devices.forEach(function (device) {
@@ -189,7 +190,7 @@ $q.define("CONFIGPANEL", {
       }, this);
 
       // Browser
-      for(var browser in filterWrapper.browsers) {
+      for(browser in filterWrapper.browsers) {
 
         browsers[browser] = filterWrapper.browsers[browser];
 
