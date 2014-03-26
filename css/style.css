@@ -3,6 +3,20 @@ body {
   font-family: Arial, Verdana, sans serif;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tbl-ranking {
+  margin-top: 15px;
+}
+
+.tbl-ranking thead {
+  color: #274b6d;
+  border-bottom: 1px solid #ccc;
+}
+
 #header .submenu {
   background-color: #FFF;
   padding: 15px;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>1&amp;1 Performancetool</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/chart-small.png">
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <div class="submenu">
+        <a href="http://www.1und1.de" class="logo">
+          <h1 id="slogan">
+            Performancetool
+          </h1>
+        </a>
+      </div>
+      <ul class="menu">
+        <li><a href="./">Home</a></li>
+        <li><a href="worst10.html">Worst-10</a></li>
+      </ul>
+    </div>
+
+    <div id="container" class="clearfix">
+      <span>Ranking of the top 10 worst pages.</span>
+      <table class="tbl-ranking">
+        <thead>
+          <tr>
+            <td>Rank</td>
+            <td>Application</td>
+            <td>Page</td>
+            <td>Time</td>
+          </tr>
+        </thead>
+        <tbody id="insertRankingDataHere">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- baseLib -->
+  <script src="js/baselib/minimized/base-min.js"></script>
+  <script src="js/baselib/minimized/animation-min.js"></script>
+  <script src="js/baselib/minimized/dataset-min.js"></script>
+  <script src="js/baselib/minimized/log-min.js"></script>
+  <script src="js/baselib/minimized/xhr-min.js"></script>
+  <script src="js/baselib/minimized/fakeserver-min.js"></script>
+  <script src="js/baselib/minimized/rest-min.js"></script>
+  <!-- FakeServer -->
+  <script src="fakeserver/rankingData.js" type="text/javascript"></script>
+  <script src="js/fakeServer.js"></script>
+  <!-- Florence -->
+  <script src="js/florence.ranking.js"></script>
+</body>
+</html>

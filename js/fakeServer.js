@@ -57,6 +57,24 @@ $q.define("FAKESERVER", {
 
           request.respond(status, headers, body);
         }
+      },
+      {
+        method: "GET",
+        url: "/performance/ranking",
+
+        response : function (request) {
+
+          "use strict";
+
+          var status, headers, response, body;
+
+          status = 200;
+          headers = { "Content-Type": "application/json" };
+          response = myRankingMockData;
+          body = JSON.stringify(response);
+
+          request.respond(status, headers, body);
+        }
       }
     ],
 
