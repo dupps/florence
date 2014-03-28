@@ -28,7 +28,7 @@ $q.define("CONFIGPANEL", {
       var timeNowValue, oneWeekOffset, oneWeekAgoValue;
 
       // The server guy needs the time as seconds (not ms)
-      timeNowValue = (new Date().valueOf() / 1000);
+      timeNowValue = Math.floor(new Date().valueOf() / 1000);
       // Sec => min => hrs => days => week
       oneWeekOffset = (1 * 60 * 60 * 24 * 7);
       oneWeekAgoValue = (timeNowValue - oneWeekOffset);
